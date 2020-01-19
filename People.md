@@ -1,8 +1,3 @@
----
-Layout
----
-
-
 # People
 
 ## We are Team
