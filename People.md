@@ -1,12 +1,13 @@
 # People
 
 ## We are Team
+-----
 
-<!-- <img src="https://zhaoph2008.github.io/IATCNG/pic/team.jpg" alt="GitHub" title="Team" width="800" height="600" /><br>  -->
+<img src="https://zhaoph2008.github.io/IATCNG/pic/team.jpg" alt="GitHub" title="Team" width="800" height="600" /><br> 
 All the member here.
 
 ## Current Students
-
+-----
 * Xia Qian, MS student,focus on Air Traffic Intelligence <br>
 M.S. thesis title: eVTOL Arrival Sequencing and Scheduling for On-Demand Urban Air Mobility
 
@@ -100,7 +101,7 @@ M.S. thesis title: eVTOL Arrival Sequencing and Scheduling for On-Demand Urban A
 
 * Haiyun Li, [Estern China Air Traffic Management Bureau, CAAC](http://www.atmb.net.cn/Indexsecond.aspx?areanum=0F223829DD0748A8)<br>
 M.S. thesis title: eVTOL Arrival Sequencing and Scheduling for On-Demand Urban Air Mobility<br>
-<!-- <img src="https://zhaoph2008.github.io/IATCNG/pic/team.jpg" alt="2018" title="Team" width="800" height="600" /><br>  -->
+<img src="https://zhaoph2008.github.io/IATCNG/pic/team.jpg" alt="2018" title="Team" width="800" height="600" /><br> 
 
 ### 2017
 * Yinda Lin, [Estern China Air Traffic Management Bureau, CAAC](http://www.atmb.net.cn/Indexsecond.aspx?areanum=0F223829DD0748A8)<br>
