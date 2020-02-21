@@ -1,3 +1,12 @@
+
+### pages
+
+* [people](https://zhaoph2008.github.io/IATCNG/People.html)
+* [support](https://zhaoph2008.github.io/IATCNG/support/support.html)
+* [contact](https://zhaoph2008.github.io/IATCNG/contact/contact.html)
+
+
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/zhaoph2008/IATCNG/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
