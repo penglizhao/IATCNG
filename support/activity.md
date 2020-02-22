@@ -3,7 +3,7 @@ Layout: default
 title:  Activities
 ---
 
-## 第一届狼人杀比赛 :wolf:
+## 第一届狼人杀比赛
 
 **赛前通知**
 
@@ -28,8 +28,3 @@ title:  Activities
 13 老李
 14 钱局
 ```
-
-First Header | Second Header
------------- | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column

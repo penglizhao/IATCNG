@@ -3,9 +3,9 @@ Layout: default
 title: Family
 ---
 
-## 本页目录
+### 本页目录
 
-* [欢迎加入:tada:](#欢迎加入)
+* [欢迎加入](#欢迎加入)
 * [网络连接](#网络连接)
 * [常用信息](#常用信息)
 * [活动](#活动)
@@ -13,11 +13,15 @@ title: Family
 
 ## 欢迎加入
 
-- [实验室座位图](https://zhaoph2008.github.io/IATCNG/support/map.html#实验室座位图)
-- [实验室楼层示意图](https://zhaoph2008.github.io/IATCNG/support/map.html#实验室楼层示意图)
-- [实验室物品准备参考](./doc/things-list.docx)
-- [实验室作息表](文件)
-- [实验室值日表](./doc/1.pdf)
+- ### [实验室座位图](https://zhaoph2008.github.io/IATCNG/support/map.html#实验室座位图)
+
+- ### [实验室楼层示意图](https://zhaoph2008.github.io/IATCNG/support/map.html#实验室楼层示意图)
+
+- ### [实验室物品准备参考](./doc/things-list.docx)
+
+- ### [实验室作息表](文件)
+
+- ### [实验室值日表](./doc/1.pdf)
 
 
 ## 网络连接
@@ -43,6 +47,16 @@ title: Family
 > - 网络报修 123456789 
 > - 和园食堂外卖 123456789 
 
+项目 | 电话
+------------ | -------------
+水电报修| 123456789
+网络报修 | 123456789
+
+|项目 | 电话 |
+|:-:|:-:|
+|水电报修| 123456789|
+|网络报修 | 123456789|
+
 - ### 常用流程分享
 
 > 一些跑腿项目的指南
@@ -63,7 +77,4 @@ title: Family
   - [狼人杀](https://zhaoph2008.github.io/IATCNG/support/activity.html)
   - 新年贺卡
 
-------
-地址：江苏省南京市江宁区将军大道29号南京航空航天大学 民航/飞行学院<br>
-邮编：211106
 
