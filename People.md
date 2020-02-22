@@ -1,3 +1,7 @@
+---
+Layout: default
+title: People
+---
 # People
 
 ## We are Team

@@ -1,6 +1,6 @@
 ---
 Layout: default
-title: Map
+title: Useful Map
 ---
 
 ### 实验室座位图

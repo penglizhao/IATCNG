@@ -1,6 +1,6 @@
 ---
 Layout: default
-title:  Activities
+title: Activity
 ---
 
 ## 第一届狼人杀比赛
