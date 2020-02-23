@@ -1,6 +1,7 @@
 ---
 Layout: default
 title: Activity
+description: Record happy moments
 ---
 
 ## 第一届狼人杀比赛

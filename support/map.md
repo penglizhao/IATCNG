@@ -1,6 +1,7 @@
 ---
 Layout: default
-title: Useful Map
+title: Useful Maps
+description: Find direction
 ---
 
 ### 实验室座位图
