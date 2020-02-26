@@ -5,7 +5,7 @@ title: People
 # People
 
 ## Tutors
-
+---
 ### Dong Sui
 Associate Professor<br>
 College of Civil Aviation<br>
@@ -28,6 +28,7 @@ Email : zhangjunfeng@nuaa.edu.cn <br>
 <p>Brief Introduction</p>
 
 ## Staff
+---
 ### Qing Huang
 Nanjing University of Aeronautics and Astronautics<br>
 Tel : 123 456 789<br>
@@ -41,6 +42,7 @@ Email :  <br>
 <p>Brief Introduction</p>
 
 ## Graduate Students
+---
 ### Xia Qian
 M.S. student, focus on Air Traffic Intelligence <br>
 Email : 
@@ -104,7 +106,7 @@ M.S. thesis title: Research on Multi Objective Arrival Sequencing and Scheduling
 
 
 ## Alumni
-
+----
 ### 2019
 
 #### Yongfei Li
@@ -138,6 +140,7 @@ Graduate student<br>
 Now Research Scientist at Robot.<br>
 
 ---
+
 ### 2018
 * Bin Lin, [Estern China Air Traffic Management Bureau, CAAC](http://www.atmb.net.cn/Indexsecond.aspx?areanum=0F223829DD0748A8)<br>
 
@@ -157,6 +160,7 @@ Now Research Scientist at Robot.<br>
 * Haiyun Li, [Estern China Air Traffic Management Bureau, CAAC](http://www.atmb.net.cn/Indexsecond.aspx?areanum=0F223829DD0748A8)<br>
 <br>
 <img src="https://zhaoph2008.github.io/IATCNG/people/pic/2018alumni.jpg" alt="2018" title="Team" width="800" height="600" /><br> 
+----
 
 ### 2017
 * Yinda Lin, [Estern China Air Traffic Management Bureau, CAAC](http://www.atmb.net.cn/Indexsecond.aspx?areanum=0F223829DD0748A8)<br>
