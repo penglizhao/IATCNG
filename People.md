@@ -4,127 +4,178 @@ title: People
 ---
 # People
 
-## We are Team
------
+## Tutors
 
-<img src="https://zhaoph2008.github.io/IATCNG/pic/team.jpg" alt="GitHub" title="Team" width="800" height="600" /><br> 
-All the member here.
+### Dong Sui
+Associate Professor<br>
+College of Civil Aviation<br>
+Nanjing University of Aeronautics and Astronautics<br>
+Email : dong_sui@nuaa.edu.cn <br>
+<p>Brief Introduction</p>
 
-## Current Students
------
-* Xia Qian, MS student,focus on Air Traffic Intelligence <br>
-M.S. thesis title: eVTOL Arrival Sequencing and Scheduling for On-Demand Urban Air Mobility
+### Shijin Wang
+Lecture<br>
+College of Civil Aviation<br>
+Nanjing University of Aeronautics and Astronautics<br>
+Email :  <br>
+<p>Brief Introduction</p>
 
-* Hai,Jiang, MS student<br>
-M.S. thesis title: eVTOL Arrival Sequencing and Scheduling for On-Demand Urban Air Mobility
+### Junfeng Zhang
+Associate Professor<br>
+College of Civil Aviation<br>
+Nanjing University of Aeronautics and Astronautics<br>
+Email : zhangjunfeng@nuaa.edu.cn <br>
+<p>Brief Introduction</p>
 
-* Yaping Xing, MS student<br>
-M.S. thesis title: eVTOL Arrival Sequencing and Scheduling for On-Demand Urban Air Mobility
+## Staff
+### Qing Huang
+Nanjing University of Aeronautics and Astronautics<br>
+Tel : 123 456 789<br>
+Email :  <br>
+<p>Brief Introduction</p>
 
-* Songwei Liu, MS student<br>
-M.S. thesis title: eVTOL Arrival Sequencing and Scheduling for On-Demand Urban Air Mobility
+### Tao Su
+Nanjing University of Aeronautics and Astronautics<br>
+Tel : 123 456 789<br>
+Email :  <br>
+<p>Brief Introduction</p>
 
-* Pengli Zhao, MS student<br>
+## Graduate Students
+### Xia Qian
+M.S. student, focus on Air Traffic Intelligence <br>
+Email : 
+<p>Brief Introduction</p>
+
+
+### Hai,Jiang
+M.S. student,focus on en-route scheduling<br>
+Email : 
+<p>Brief Introduction</p>
+
+* Yaping Xing, M.S. Student<br>
+
+
+* Songwei Liu, M.S. Student<br>
+
+
+### Pengli Zhao
+M.S. Student, focus on arrival sequence and scheduling.<br>
+Email : zhaopengli@nuaa.edu.cn <br>
+[Website](https://zhaoph2008.github.io) <br>
+<p>Pengli Zhao join the lab in 2017.He interested in arrival management and arrival sequencing and scheduling. He planed to study abroad after graduate.</p>
 M.S. thesis title: Research on Multi Objective Arrival Sequencing and Scheduling Based on Meta Hearustic Method.
 
-* Haining Zu, MS student<br>
+* Haining Zu, M.S. Student<br>
 M.S. thesis title: Research on Multi Objective Arrival Sequencing and Scheduling Based on Meta 
 
-* Shichen Tu, MS student<br>
+* Shichen Tu, M.S. Student<br>
 
 
-* Yulu Li, MS student<br>
+* Yulu Li, M.S. Student<br>
 
 
-* Weiping Xu, MS student<br>
+* Weiping Xu, M.S. Student<br>
 
 
-* Lubao You, MS student<br>
+* Lubao You, M.S. Student<br>
 
 
-* Xuhao Gui, MS student<br>
+* Xuhao Gui, M.S. Student<br>
 
 
-* Jinjin Lin, MS student<br>
+* Jinjin Lin, M.S. Student<br>
 
 
-* Kai Zhang, MS student<br>
+* Kai Zhang, M.S. Student<br>
 
 
-* Qian Li, MS student<br>
+* Qian Li, M.S. Student<br>
 
 
-* Chunwei Yang, MS student<br>
+* Chunwei Yang, M.S. Student<br>
 
 
-* Zihan Peng, MS student<br>
+* Zihan Peng, M.S. Student<br>
 
 
-* Jiahao Li, MS student<br>
+* Jiahao Li, M.S. Student<br>
 
 * Tong Xiang, undergraduate student<br>
 
 
 ## Alumni
-----
+
 ### 2019
-* Yongfei Li, [Huawei Inc](https://www.huawei.com/cn/press-events/gallery/facilities/hw_277228)<br>
-M.S. thesis title: eVTOL Arrival Sequencing and Scheduling for On-Demand Urban Air Mobility
 
-* Wencan Ding, [China Eastern Airlines](http://www.ceair.com/)
+#### Yongfei Li
+
+Graduate student<br>
+Now Software Engineer at [Huawei Inc](https://www.huawei.com/cn/press-events/gallery/facilities/hw_277228).<br>
+
+#### Wencan Ding
+
+Graduate student<br>
+Now Dispatch at [China Eastern Airlines](http://www.ceair.com/).
 <br>
-M.S. thesis title: eVTOL Arrival Sequencing and Scheduling for On-Demand Urban Air Mobility
 
-* Fang Liu , [Nanjing LES Information Technology Co.Ltd](http://www.les.cn/)<br>
-M.S. thesis title: eVTOL Arrival Sequencing and Scheduling for On-Demand Urban Air Mobility
+#### Fang Liu
 
-* Jie Liu, [China Aviation Radio and Electronics Research Institute(615)](http://www.careri.avic.com/)<br>
-M.S. thesis title: eVTOL Arrival Sequencing and Scheduling for On-Demand Urban Air Mobility
+Graduate student<br>
+Now Software Engineer at [Nanjing LES Information Technology Co.Ltd](http://www.les.cn/)<br>
 
-* Ximei Dai, [Comac](http://www.comac.cc/)<br>
-M.S. thesis title: eVTOL Arrival Sequencing and Scheduling for On-Demand Urban Air Mobility
+#### Jie Liu
+Graduate student<br>
+Now Research Scientist at [China Aviation Radio and Electronics Research Institute(615)](http://www.careri.avic.com/).<br>
 
-* Yunxuan Han, Robot.<br>
-M.S. thesis title: eVTOL Arrival Sequencing and Scheduling for On-Demand Urban Air Mobility
+
+#### Ximei Dai
+Graduate student<br>
+Now Research Scientist at [Comac](http://www.comac.cc/)<br>
+
+
+#### Yunxuan Han
+Graduate student<br>
+Now Research Scientist at Robot.<br>
+
 ---
 ### 2018
 * Bin Lin, [Estern China Air Traffic Management Bureau, CAAC](http://www.atmb.net.cn/Indexsecond.aspx?areanum=0F223829DD0748A8)<br>
-M.S. thesis title: eVTOL Arrival Sequencing and Scheduling for On-Demand Urban Air Mobility
+
 
 * Shuying Cai, [China Airlines]()<br>
-M.S. thesis title: eVTOL Arrival Sequencing and Scheduling for On-Demand Urban Air Mobility
+
 
 * Jing Hu [Sunan Shuofang International Airport](https://baike.baidu.com/item/%E8%8B%8F%E5%8D%97%E7%A1%95%E6%94%BE%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA/9684764?fromtitle=%E6%97%A0%E9%94%A1%E6%9C%BA%E5%9C%BA&fromid=976558)<br>
-M.S. thesis title: eVTOL Arrival Sequencing and Scheduling for On-Demand Urban Air Mobility
+
 
 * Zhixiang Zheng, [ZTE](https://www.zte.com.cn/global/)<br>
-M.S. thesis title: eVTOL Arrival Sequencing and Scheduling for On-Demand Urban Air Mobility
+
 
 * Haibo Zhu, [Sunan Shuofang International Airport](https://baike.baidu.com/item/%E8%8B%8F%E5%8D%97%E7%A1%95%E6%94%BE%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA/9684764?fromtitle=%E6%97%A0%E9%94%A1%E6%9C%BA%E5%9C%BA&fromid=976558)<br>
-M.S. thesis title: eVTOL Arrival Sequencing and Scheduling for On-Demand Urban Air Mobility
+
 
 * Haiyun Li, [Estern China Air Traffic Management Bureau, CAAC](http://www.atmb.net.cn/Indexsecond.aspx?areanum=0F223829DD0748A8)<br>
-M.S. thesis title: eVTOL Arrival Sequencing and Scheduling for On-Demand Urban Air Mobility<br>
-<img src="https://zhaoph2008.github.io/IATCNG/pic/2018alumni.jpg" alt="2018" title="Team" width="800" height="600" /><br> 
+<br>
+<img src="https://zhaoph2008.github.io/IATCNG/people/pic/2018alumni.jpg" alt="2018" title="Team" width="800" height="600" /><br> 
 
 ### 2017
 * Yinda Lin, [Estern China Air Traffic Management Bureau, CAAC](http://www.atmb.net.cn/Indexsecond.aspx?areanum=0F223829DD0748A8)<br>
-M.S. thesis title: eVTOL Arrival Sequencing and Scheduling for On-Demand Urban Air Mobility
+
 
 * Yinda Lin, [Estern China Air Traffic Management Bureau, CAAC](http://www.atmb.net.cn/Indexsecond.aspx?areanum=0F223829DD0748A8)<br>
-M.S. thesis title: eVTOL Arrival Sequencing and Scheduling for On-Demand Urban Air Mobility
+
 
 * Yinda Lin, [Estern China Air Traffic Management Bureau, CAAC](http://www.atmb.net.cn/Indexsecond.aspx?areanum=0F223829DD0748A8)<br>
-M.S. thesis title: eVTOL Arrival Sequencing and Scheduling for On-Demand Urban Air Mobility
+
 
 * Tengteng Ge, [Estern China Air Traffic Management Bureau, CAAC](http://www.atmb.net.cn/Indexsecond.aspx?areanum=0F223829DD0748A8)<br>
-M.S. thesis title: eVTOL Arrival Sequencing and Scheduling for On-Demand Urban Air Mobility
+
 
 * Qiang Chen, [Estern China Air Traffic Management Bureau, CAAC](http://www.atmb.net.cn/Indexsecond.aspx?areanum=0F223829DD0748A8)<br>
-M.S. thesis title: eVTOL Arrival Sequencing and Scheduling for On-Demand Urban Air Mobility
+
 
 * Yinda Lin, [Estern China Air Traffic Management Bureau, CAAC](http://www.atmb.net.cn/Indexsecond.aspx?areanum=0F223829DD0748A8)<br>
-M.S. thesis title: eVTOL Arrival Sequencing and Scheduling for On-Demand Urban Air Mobility
+
 ### 2016
 
 ### 2015
@@ -138,6 +189,23 @@ M.S. thesis title: eVTOL Arrival Sequencing and Scheduling for On-Demand Urban A
 ### 2011
 
 ### 2010
+
+## Collaborators
+
+>friends in project and research
+
+Fan Zheng , Boeing (China) Research and Technology
+
+
+Guo Haipeng, Central South Air Traffic Management Bureau, CAAC
+
+COMAC
+
+
+
+
+
+
 
 
 
