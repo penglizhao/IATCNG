@@ -63,6 +63,8 @@ description: We are together!
   - [南航Logo](https://www.nuaa.edu.cn/589/list.htm)
   - [南航信纸](./doc/temple.pptx)
   - [每周总结和计划](./doc/plan.docx)
+  - [matlab_plot画图指南](./doc/matlab-plot cheatsheet.pdf)
+  - [python_matplotlib画图指南](./doc/matplotlib-cheatsheet.pdf)
 
 ## 活动
   - [狼人杀](https://zhaoph2008.github.io/IATCNG/support/activity.html)
