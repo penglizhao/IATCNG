@@ -18,6 +18,27 @@
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <script>
+        function copy(dest, source) {
+            if (dest.source == source) {
+                dest.innerHTML = "";
+                dest.source = null;
+                dest.style.width = "0px";
+                dest.style.border = "";
+                dest.style.padding = "0px";
+            }
+            else {
+                dest.innerHTML = source.innerHTML;
+                dest.source = source;
+                dest.style.width = "800px";
+                dest.style.padding = "10px";
+                dest.style.border = "2px dotted gray";
+                dest.style.background = "#F5F5F5";
+                dest.style.margin = "10px";
+            }
+            dest.blur();
+        }
+    </script>
   </head>
   <body>
     <!-- <a id="skip-to-content" href="#content">Skip to the content.</a> -->
