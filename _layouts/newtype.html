@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+
+    {% if site.google_analytics %}
+      <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{{ site.google_analytics }}');
+      </script>
+    {% endif %}
+    <meta charset="UTF-8">
+
+{% seo %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <script>
+        function copy(dest, source) {
+            if (dest.source == source) {
+                dest.innerHTML = "";
+                dest.source = null;
+                dest.style.width = "0px";
+                dest.style.border = "";
+                dest.style.padding = "0px";
+            }
+            else {
+                dest.innerHTML = source.innerHTML;
+                dest.source = source;
+                dest.style.width = "800px";
+                dest.style.padding = "10px";
+                dest.style.border = "2px dotted gray";
+                dest.style.background = "#F5F5F5";
+                dest.style.margin = "10px";
+            }
+            dest.blur();
+        }
+    </script>
+  </head>
+  <body>
+    <!-- <a id="skip-to-content" href="#content">Skip to the content.</a> -->
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
+      <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
+      <!-- {% if site.github.is_project_page %}
+        <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
+      {% endif %} -->
+      {% if site.show_downloads %}
+        <a href="{{ site.github.zip_url }}" class="btn">Bio</a>
+        <a href="{{ site.github.another_url }}" class="btn">News</a>
+        <a href="{{ site.github.third_url }}" class="btn">Apple</a>
+      {% endif %}
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      {{ content }}
+      <script>
+        paper_count = 0
+
+        function add_paper(title, authors, conference, link, bib, abstract, arxiv_link, code, data, slides, talk, msg) {
+            list_entry = "<li style=\"font-size:18px\">"
+            if (link != null)
+                list_entry += "<a href=\"" + link + "\">"
+            list_entry += "<b>" + title + "</b>"
+            if (link != null)
+                list_entry += "</a>"
+            list_entry += "<br>" + authors + ".<br>" + conference + ".</li>"
+
+            if (bib != null) {
+                list_entry += "<div id=\"bib" + paper_count + "\" style=\"display:none\">" + bib + "</div>"
+                list_entry += "<a href=\"javascript:copy(div" + paper_count + ",bib" + paper_count + ")\"> <span class=\"label label-success\">bib</span></a>"
+            }
+
+            if (abstract != null) {
+                list_entry += "<div id=\"abstract" + paper_count + "\" style=\"display:none\">" + abstract + "</div>"
+                list_entry += "<a href=\"javascript:copy(div" + paper_count + ",abstract" + paper_count + ")\"> <span class=\"label label-warning\">abstract</span></a>"
+            }
+            if (arxiv_link != null)
+                list_entry += " <a href=\"" + arxiv_link + "\"><span class=\"label label-primary\">arXiv</span></a>"
+
+            if (code != null)
+                list_entry += " <a href=\"" + code + "\"><span class=\"label label-danger\">code/models</span></a>"
+
+            if (data != null)
+                list_entry += " <a href=\"" + data + "\"><span class=\"label label-default\">data</span></a>"
+
+            if (slides != null)
+                list_entry += " <a href=\"" + slides + "\"><span class=\"label label-info\">slides/poster</span></a>"
+
+            if (talk != null)
+                list_entry += " <a href=\"" + talk + "\"><span class=\"label label-success\">talk</span></a>"
+
+            list_entry += "<br>"
+
+            if (msg != null)
+                list_entry += "<i>" + msg + "</i>"
+
+            list_entry += "<div id=\"div" + paper_count + "\" style=\"font-size:15px\"></div><br>"
+
+            document.write(list_entry)
+
+            paper_count += 1
+        }
+
+        document.write("<h2>2020</h2>")
+        document.write("<ul>")
+        add_paper("SimCSE: Simple Contrastive Learning of Sentence Embeddings",
+            "Tianyu Gao*, Xingcheng Yao*, <b>Danqi Chen</b>",
+            "arXiv:2104.08821",
+            "https://arxiv.org/pdf/2104.08821.pdf",
+            "@article{gao2021simcse,<br>" +
+            "&nbsp;&nbsp;&nbsp;title={SimCSE: Simple Contrastive Learning of Sentence Embeddings},<br>" +
+            "&nbsp;&nbsp;&nbsp;author={Gao, Tianyu and Yao, Xingcheng and Chen, Danqi},<br>" +
+            "&nbsp;&nbsp;&nbsp;journal={arXiv preprint arXiv:2104.08821},<br>" +
+            "&nbsp;&nbsp;&nbsp;year={2021}<br>}",
+            "This paper presents SimCSE, a simple contrastive learning framework that greatly advances the state-of-the-art sentence embeddings. We first describe an unsupervised approach, which takes an input sentence and predicts itself in a contrastive objective, with only standard dropout used as noise. This simple method works surprisingly well, performing on par with previous supervised counterparts. We hypothesize that dropout acts as minimal data augmentation and removing it leads to a representation collapse. Then, we draw inspiration from the recent success of learning sentence embeddings from natural language inference (NLI) datasets and incorporate annotated pairs from NLI datasets into contrastive learning by using \"entailment\" pairs as positives and \"contradiction\" pairs as hard negatives. We evaluate SimCSE on standard semantic textual similarity (STS) tasks, and our unsupervised and supervised models using BERT-base achieve an average of 74.5% and 81.6% Spearman's correlation respectively, a 7.9 and 4.6 points improvement compared to previous best results. We also show that contrastive learning theoretically regularizes pre-trained embeddings' anisotropic space to be more uniform, and it better aligns positive pairs when supervised signals are available.",
+            "https://arxiv.org/abs/2104.08821",
+            "https://github.com/princeton-nlp/SimCSE"
+        )
+
+        add_paper("Making Pre-trained Language Models Better Few-shot Learners",
+            "Tianyu Gao*, Adam Fisch*, <b>Danqi Chen</b>",
+            "In ACL 2021",
+            "https://arxiv.org/pdf/2012.15723.pdf",
+            "@inproceedings{gao2021making,<br>" +
+            "&nbsp;&nbsp;&nbsp;title={Making Pre-trained Language Models Better Few-shot Learners},<br>" +
+            "&nbsp;&nbsp;&nbsp;author={Gao, Tianyu and Fisch, Adam and Chen, Danqi},<br>" +
+            "&nbsp;&nbsp;&nbsp;booktitle={Association for Computational Linguistics (ACL)},<br>" +
+            "&nbsp;&nbsp;&nbsp;year={2021}<br>}",
+            "The recent GPT-3 model (Brown et al., 2020) achieves remarkable few-shot performance solely by leveraging a natural-language prompt and a few task demonstrations as input context. Inspired by their findings, we study few-shot learning in a more practical scenario, where we use smaller language models for which fine-tuning is computationally efficient. We present LM-BFF--better few-shot fine-tuning of language models--a suite of simple and complementary techniques for fine-tuning language models on a small number of annotated examples. Our approach includes (1) prompt-based fine-tuning together with a novel pipeline for automating prompt generation; and (2) a refined strategy for dynamically and selectively incorporating demonstrations into each context. Finally, we present a systematic evaluation for analyzing few-shot performance on a range of NLP tasks, including classification and regression. Our experiments demonstrate that our methods combine to dramatically outperform standard fine-tuning procedures in this low resource setting, achieving up to 30% absolute improvement, and 11% on average across all tasks. Our approach makes minimal assumptions on task resources and domain expertise, and hence constitutes a strong task-agnostic method for few-shot learning.",
+            "https://arxiv.org/abs/2012.15723",
+            "https://github.com/princeton-nlp/LM-BFF",
+            null,
+            null,
+            null,
+            "Check out Tianyu's <a href=\"https://gaotianyu.xyz/prompting/\" style=\"color: #8C1515\"> blog post</a> on prompting and LM-BFF."
+        )
+
+        add_paper("Learning Dense Representations of Phrases at Scale",
+            "Jinhyuk Lee, Mujeen Sung, Jaewoo Kang, <b>Danqi Chen</b>",
+            "In ACL 2021",
+            "https://arxiv.org/pdf/2012.12624.pdf",
+            "@inproceedings{lee2021learning,<br>" +
+            "&nbsp;&nbsp;&nbsp;title={Learning Dense Representations of Phrases at Scale},<br>" +
+            "&nbsp;&nbsp;&nbsp;author={Lee, Jinhyuk and Sung, Mujeen and Kang, Jaewoo and Chen, Danqi},<br>" +
+            "&nbsp;&nbsp;&nbsp;booktitle={Association for Computational Linguistics (ACL)},<br>" +
+            "&nbsp;&nbsp;&nbsp;year={2021}<br>}",
+            "Open-domain question answering can be reformulated as a phrase retrieval problem, without the need for processing documents on-demand during inference (Seo et al., 2019). However, current phrase retrieval models heavily depend on their sparse representations while still underperforming retriever-reader approaches. In this work, we show for the first time that we can learn dense phrase representations alone that achieve much stronger performance in open-domain QA. Our approach includes (1) learning query-agnostic phrase representations via question generation and distillation; (2) novel negative-sampling methods for global normalization; (3) query-side fine-tuning for transfer learning. On five popular QA datasets, our model DensePhrases improves previous phrase retrieval models by 15%-25% absolute accuracy and matches the performance of state-of-the-art retriever-reader models. Our model is easy to parallelize due to pure dense representations and processes more than 10 questions per second on CPUs. Finally, we directly use our pre-indexed dense phrase representations for two slot filling tasks, showing the promise of utilizing DensePhrases as a dense knowledge base for downstream tasks.",
+            "https://arxiv.org/abs/2012.12624",
+            "https://github.com/princeton-nlp/DensePhrases",
+            null,
+            null,
+            null,
+            "You can try out the <a href=\"http://densephrases.korea.ac.kr/\" style=\"color: #8C1515\">demo</a> of DensePhrases!"
+        )
+
+        add_paper("A Frustratingly Easy Approach for Entity and Relation Extraction",
+            "Zexuan Zhong, <b>Danqi Chen</b>",
+            "In NAACL 2021",
+            "https://arxiv.org/pdf/2010.12812.pdf",
+            "@inproceedings{zhong2021frustratingly,<br>" +
+            "&nbsp;&nbsp;&nbsp;title={A Frustratingly Easy Approach for Entity and Relation Extraction},<br>" +
+            "&nbsp;&nbsp;&nbsp;author={Zhong, Zexuan and Chen, Danqi},<br>" +
+            "&nbsp;&nbsp;&nbsp;booktitle={North American Association for Computational Linguistics (NAACL)},<br>" +
+            "&nbsp;&nbsp;&nbsp;year={2021}<br>}",
+            "End-to-end relation extraction aims to identify named entities and extract relations between them. Most recent work models these two subtasks jointly, either by casting them in one structured prediction framework, or performing multi-task learning through shared representations. In this work, we present a simple pipelined approach for entity and relation extraction, and establish the new state-of-the-art on standard benchmarks (ACE04, ACE05 and SciERC), obtaining a 1.7%-2.8% absolute improvement in relation F1 over previous joint models with the same pre-trained encoders. Our approach essentially builds on two independent encoders and merely uses the entity model to construct the input for the relation model. Through a series of careful examinations, we validate the importance of learning distinct contextual representations for entities and relations, fusing entity information early in the relation model, and incorporating global context. Finally, we also present an efficient approximation to our approach which requires only one pass of both entity and relation encoders at inference time, achieving an 8-16× speedup with a slight reduction in accuracy.",
+            "https://arxiv.org/abs/2010.12812",
+            "https://github.com/princeton-nlp/PURE",
+            null,
+            "https://github.com/princeton-nlp/PURE/blob/main/slides/slides.pdf"
+        )
+
+        add_paper("Factual Probing Is [MASK]: Learning vs. Learning to Recall",
+            "Zexuan Zhong*, Dan Friedman*, <b>Danqi Chen</b>",
+            "In NAACL 2021",
+            "https://arxiv.org/pdf/2104.05240.pdf",
+            "@inproceedings{zhong2021factual,<br>" +
+            "&nbsp;&nbsp;&nbsp;title={Factual Probing Is[MASK]: Learning vs. Learning to Recall},<br>" +
+            "&nbsp;&nbsp;&nbsp;author={Zhong, Zexuan and Friedman, Dan and Chen, Danqi},<br>" +
+            "&nbsp;&nbsp;&nbsp;booktitle={North American Association for Computational Linguistics (NAACL)},<br>" +
+            "&nbsp;&nbsp;&nbsp;year={2021}<br>}",
+            "Petroni et al. (2019) demonstrated that it is possible to retrieve world facts from a pre-trained language model by expressing them as cloze-style prompts and interpret the model's prediction accuracy as a lower bound on the amount of factual information it encodes. Subsequent work has attempted to tighten the estimate by searching for better prompts, using a disjoint set of facts as training data. In this work, we make two complementary contributions to better understand these factual probing techniques. First, we propose OptiPrompt, a novel and efficient method which directly optimizes in continuous embedding space. We find this simple method is able to predict an additional 6.4% of facts in the LAMA benchmark. Second, we raise a more important question: Can we really interpret these probing results as a lower bound? Is it possible that these prompt-search methods learn from the training data too? We find, somewhat surprisingly, that the training data used by these methods contains certain regularities of the underlying fact distribution, and all the existing prompt methods, including ours, are able to exploit them for better fact prediction. We conduct a set of control experiments to disentangle \"learning\" from \"learning to recall\", providing a more detailed picture of what different prompts can reveal about pre-trained language models.",
+            "https://arxiv.org/abs/2104.05240",
+            "https://github.com/princeton-nlp/OptiPrompt",
+            null,
+            "https://github.com/princeton-nlp/OptiPrompt/blob/main/slides/slides.pdf"
+        )
+
+        add_paper("Non-Parametric Few-Shot Learning for Word Sense Disambiguation",
+            "Howard Chen, Mengzhou Xia, <b>Danqi Chen</b>",
+            "In NAACL 2021 (short)",
+            "https://arxiv.org/pdf/2104.12677.pdf",
+            "@inproceedings{chen2021nonparametric,<br>" +
+            "&nbsp;&nbsp;&nbsp;title={Non-Parametric Few-Shot Learning for Word Sense Disambiguation},<br>" +
+            "&nbsp;&nbsp;&nbsp;author={Chen, Howard and Xia, Mengzhou and Chen, Danqi},<br>" +
+            "&nbsp;&nbsp;&nbsp;booktitle={North American Association for Computational Linguistics (NAACL)},<br>" +
+            "&nbsp;&nbsp;&nbsp;year={2021}<br>}",
+            "Word sense disambiguation (WSD) is a long-standing problem in natural language processing. One significant challenge in supervised all-words WSD is to classify among senses for a majority of words that lie in the long-tail distribution. For instance, 84% of the annotated words have less than 10 examples in the SemCor training data. This issue is more pronounced as the imbalance occurs in both word and sense distributions. In this work, we propose MetricWSD, a non-parametric few-shot learning approach to mitigate this data imbalance issue. By learning to compute distances among the senses of a given word through episodic training, MetricWSD transfers knowledge (a learned metric space) from high-frequency words to infrequent ones. MetricWSD constructs the training episodes tailored to word frequencies and explicitly addresses the problem of the skewed distribution, as opposed to mixing all the words trained with parametric models in previous work. Without resorting to any lexical resources, MetricWSD obtains strong performance against parametric alternatives, achieving a 75.1 F1 score on the unified WSD evaluation benchmark (Raganato et al., 2017b). Our analysis further validates that infrequent words and senses enjoy significant improvement.",
+            "https://arxiv.org/abs/2104.12677",
+            "https://github.com/princeton-nlp/metric-wsd"
+        )
+
+        add_paper("NeurIPS 2020 EfficientQA Competition: Systems, Analyses and Lessons Learned",
+            "Sewon Min, Jordan Boyd-Graber, Chris Alberti, <b>Danqi Chen</b>, Eunsol Choi, Michael Collins, Kelvin Guu, Hannaneh Hajishirzi, Kenton Lee, Jennimaria Palomaki, Colin Raffel, Adam Roberts, Tom Kwiatkowski and EfficientQA participants",
+            "Proceedings of Machine Learning Research",
+            "https://arxiv.org/pdf/2101.00133.pdf",
+            "@article{min2021neurips,<br>" +
+            "&nbsp;&nbsp;&nbsp;title={NeurIPS 2020 EfficientQA Competition: Systems, Analyses and Lessons Learned},<br>" +
+            "&nbsp;&nbsp;&nbsp;author={Sewon Min and Jordan Boyd-Graber and Chris Alberti and Danqi Chen and Eunsol Choi and Michael Collins and Kelvin Guu and Hannaneh Hajishirzi and Kenton Lee and Jennimaria Palomaki and Colin Raffel and Adam Roberts and Tom Kwiatkowski and Patrick Lewis and Yuxiang Wu and Heinrich Küttler and Linqing Liu and Pasquale Minervini and Pontus Stenetorp and Sebastian Riedel and Sohee Yang and Minjoon Seo and Gautier Izacard and Fabio Petroni and Lucas Hosseini and Nicola De Cao and Edouard Grave and Ikuya Yamada and Sonse Shimaoka and Masatoshi Suzuki and Shumpei Miyawaki and Shun Sato and Ryo Takahashi and Jun Suzuki and Martin Fajcik and Martin Docekal and Karel Ondrej and Pavel Smrz and Hao Cheng and Yelong Shen and Xiaodong Liu and Pengcheng He and Weizhu Chen and Jianfeng Gao and Barlas Oguz and Xilun Chen and Vladimir Karpukhin and Stan Peshterliev and Dmytro Okhonko and Michael Schlichtkrull and Sonal Gupta and Yashar Mehdad and Wen-tau Yih},<br>" +
+            "&nbsp;&nbsp;&nbsp;journal={arXiv preprint arXiv:2101.00133},<br>" +
+            "&nbsp;&nbsp;&nbsp;year={2021}<br>}",
+            "We review the EfficientQA competition from NeurIPS 2020. The competition focused on open-domain question answering (QA), where systems take natural language questions as input and return natural language answers. The aim of the competition was to build systems that can predict correct answers while also satisfying strict on-disk memory budgets. These memory budgets were designed to encourage contestants to explore the trade-off between storing large, redundant, retrieval corpora or the parameters of large learned models. In this report, we describe the motivation and organization of the competition, review the best submissions, and analyze system predictions to inform a discussion of evaluation for open-domain QA.",
+            "https://arxiv.org/abs/2101.00133",
+            "https://github.com/efficientqa/retrieval-based-baselines",
+            "https://github.com/google-research-datasets/natural-questions/tree/master/nq_open",
+            null,
+            "https://www.youtube.com/watch?v=3tdWV4vAf2I&ab_channel=SewonMin",
+            "<a href=\"http://efficientqa.github.io/\" style=\"color: #8C1515\">http://efficientqa.github.io/</a>"
+        )
+        document.write("</ul>")
+
+        document.write("<h2>2020</h2>")
+        document.write("<ul>")
+
+
+        add_paper("Dense Passage Retrieval for Open-Domain Question Answering",
+            "Vladimir Karpukhin*, Barlas Oğuz*, Sewon Min, Patrick Lewis, Ledell Wu, Sergey Edunov, <b>Danqi Chen</b>, Wen-tau Yih",
+            "In EMNLP 2020",
+            "papers/emnlp2020a.pdf",
+            "@inproceedings{karpukhin2020dense,<br>" +
+            "&nbsp;&nbsp;&nbsp;title={Dense Passage Retrieval for Open-Domain Question Answering},<br>" +
+            "&nbsp;&nbsp;&nbsp;author={Karpukhin, Vladimir and Oğuz, Barlas and Min, Sewon and Lewis, Patrick and Wu, Ledell and Edunov, Sergey and Chen, Danqi and Yih, Wen-tau},<br>" +
+            "&nbsp;&nbsp;&nbsp;booktitle={Empirical Methods in Natural Language Processing (EMNLP)},<br>" +
+            "&nbsp;&nbsp;&nbsp;year={2020}<br>}",
+            "Open-domain question answering relies on efficient passage retrieval to select candidate contexts, where traditional sparse vector space models, such as TF-IDF or BM25, are the de facto method. In this work, we show that retrieval can be practically implemented using dense representations alone, where embeddings are learned from a small number of questions and passages by a simple dual-encoder framework. When evaluated on a wide range of open-domain QA datasets, our dense retriever outperforms a strong Lucene-BM25 system largely by 9%-19% absolute in terms of top-20 passage retrieval accuracy, and helps our end-to-end QA system establish new state-of-the-art on multiple open-domain QA benchmarks.",
+            "https://arxiv.org/abs/2004.04906",
+            "https://github.com/facebookresearch/DPR",
+            null,
+            null,
+            "https://slideslive.com/38939151/dense-passage-retrieval-for-opendomain-question-answering",
+            "You can try out the <a href=\"http://qa.cs.washington.edu:2020/\" style=\"color: #8C1515\">demo</a> of DPR!"
+        )
+
+        add_paper("Open-Domain Question Answering",
+            "<b>Danqi Chen</b>, Wen-tau Yih",
+            "ACL 2020 (Tutorial)",
+            "papers/acl2020tutorial.pdf",
+            "@inproceedings{chen2020open,<br>" +
+            "&nbsp;&nbsp;&nbsp;title={Open-Domain Question Answering},<br>" +
+            "&nbsp;&nbsp;&nbsp;author={Chen, Danqi and Yih, Wen-tau},<br>" +
+            "&nbsp;&nbsp;&nbsp;journal={Association for Computational Linguistics (ACL): Tutorial Abstracts},<br>" +
+            "&nbsp;&nbsp;&nbsp;year={2020},<br>" +
+            "&nbsp;&nbsp;&nbsp;pages={34--37}<br>}",
+            "This tutorial provides a comprehensive and coherent overview of cutting-edge research in open-domain question answering (QA), the task of answering questions using a large collection of documents of diversified topics. We will start by first giving a brief historical background, discussing the basic setup and core technical challenges of the research problem, and then describe modern datasets with the common evaluation metrics and benchmarks. The focus will then shift to cutting-edge models proposed for open-domain QA, including two-stage retriever-reader approaches, dense retriever and end-to-end training, and retriever-free methods. Finally, we will cover some hybrid approaches using both text and large knowledge bases and conclude the tutorial with important open questions. We hope that the tutorial will not only help the audience to acquire up-to-date knowledge but also provide new perspectives to stimulate the advances of open-domain QA research in the next phase.",
+            null,
+            null,
+            null,
+            "https://github.com/danqi/acl2020-openqa-tutorial/tree/master/slides",
+            "https://slideslive.com/38931668/t8-opendomain-question-answering"
+        )
+        document.write("</ul>")
+
+        document.write("<h2>2019</h2>")
+        document.write("<ul>")
+
+        add_paper("Knowledge Guided Text Retrieval and Reading for Open Domain Question Answering",
+            "Sewon Min, <b>Danqi Chen</b>, Luke Zettlemoyer, Hannaneh Hajishirzi",
+            "arXiv 1911.03868",
+            "papers/graphqa_paper.pdf",
+            "@article{min2019knowledge,<br>" +
+            "&nbsp;&nbsp;&nbsp;title={Knowledge Guided Text Retrieval and Reading for Open Domain Question Answering},<br>" +
+            "&nbsp;&nbsp;&nbsp;author={Min, Sewon and Chen, Danqi and Zettlemoyer, Luke and Hajishirzi, Hannaneh},<br>" +
+            "&nbsp;&nbsp;&nbsp;journal={arXiv preprint arXiv:1911.03868},<br>" +
+            "&nbsp;&nbsp;&nbsp;year={2019}<br>}",
+            "We introduce an approach for open-domain question answering (QA) that retrieves and reads a passage graph, where vertices are passages of text and edges represent relationships that are derived from an external knowledge base or co-occurrence in the same article. Our goals are to boost coverage by using knowledge-guided retrieval to find more relevant passages than text-matching methods, and to improve accuracy by allowing for better knowledge-guided fusion of information across related passages. Our graph retrieval method expands a set of seed keyword-retrieved passages by traversing the graph structure of the knowledge base. Our reader extends a BERT-based architecture and updates passage representations by propagating information from related passages and their relations, instead of reading each passage in isolation. Experiments on three open-domain QA datasets, WebQuestions, Natural Questions and TriviaQA, show improved performance over non-graph baselines by 2-11% absolute. Our approach also matches or exceeds the state-of-the-art in every case, without using an expensive end-to-end training regime.",
+            "https://arxiv.org/abs/1911.03868"
+        )
+
+        add_paper("A Discrete Hard EM Approach for Weakly Supervised Question Answering",
+            "Sewon Min, <b>Danqi Chen</b>, Hannaneh Hajishirzi, Luke Zettlemoyer",
+            "In EMNLP 2019",
+            "papers/emnlp2019.pdf",
+            "@article{min2019discrete,<br>" +
+            "&nbsp;&nbsp;&nbsp;title={A Discrete Hard {EM} Approach for Weakly Supervised Question Answering},<br>" +
+            "&nbsp;&nbsp;&nbsp;author={Min, Sewon and Chen, Danqi and Hajishirzi, Hannaneh and Zettlemoyer, Luke},<br>" +
+            "&nbsp;&nbsp;&nbsp;booktitle={Empirical Methods in Natural Language Processing (EMNLP)},<br>" +
+            "&nbsp;&nbsp;&nbsp;year={2019},<br>" +
+            "&nbsp;&nbsp;&nbsp;pages={2851--2864}<br>}",
+            "Many question answering (QA) tasks only provide weak supervision for how the answer should be computed. For example, TriviaQA answers are entities that can be mentioned multiple times in supporting documents, while DROP answers can be computed by deriving many different equations from numbers in the reference text. In this paper, we show it is possible to convert such tasks into discrete latent variable learning problems with a precomputed, task-specific set of possible \"solutions\" (e.g. different mentions or equations) that contains one correct option. We then develop a hard EM learning scheme that computes gradients relative to the most likely solution at each update. Despite its simplicity, we show that this approach significantly outperforms previous methods on six QA tasks, including absolute gains of 2--10%, and achieves the state-of-the-art on five of them. Using hard updates instead of maximizing marginal likelihood is key to these results as it encourages the model to find the one correct answer, which we show through detailed qualitative analysis.",
+            "https://arxiv.org/abs/1909.04849",
+            "https://github.com/shmsw25/qa-hard-em",
+            null,
+            "presentations/emnlp2019_slides.pdf",
+            "https://vimeo.com/426355627"
+        )
+        document.write("</ul>")
+
+        document.write("<h2>2018 and before</h2>")
+        document.write("<ul>")
+
+        add_paper("Reading Wikipedia to Answer Open-Domain Questions",
+            "<b>Danqi Chen</b>, Adam Fisch, Jason Weston, Antoine Bordes",
+            "In ACL 2017",
+            "papers/acl2017.pdf",
+            "@inproceedings{chen2017reading,<br>" +
+            "&nbsp;&nbsp;&nbsp;title={Reading {Wikipedia} to Answer Open-Domain Questions},<br>" +
+            "&nbsp;&nbsp;&nbsp;author={Chen, Danqi and Fisch, Adam and Weston, Jason and Bordes, Antoine},<br>" +
+            "&nbsp;&nbsp;&nbsp;booktitle={Association for Computational Linguistics (ACL)},<br>" +
+            "&nbsp;&nbsp;&nbsp;year={2017},<br>" +
+            "&nbsp;&nbsp;&nbsp;pages={1870--1879}<br>}",
+            "This paper proposes to tackle open-domain question answering using Wikipedia as the unique knowledge source: the answer to any factoid question is a text span in a Wikipedia article. This task of machine reading at scale combines the challenges of document retrieval (finding the relevant articles) with that of machine comprehension of text (identifying the answer spans from those articles). Our approach combines a search component based on bigram hashing and TF-IDF matching with a multi-layer recurrent neural network model trained to detect answers in Wikipedia paragraphs. Our experiments on multiple existing QA datasets indicate that (1) both modules are highly competitive with respect to existing counterparts and (2) multitask learning using distant supervision on their combination is an effective complete system on this challenging task.",
+            "https://arxiv.org/abs/1704.00051",
+            "https://github.com/facebookresearch/DrQA",
+            "https://github.com/danqi/drqa-datasets",
+            "presentations/acl2017_poster.pdf",
+            null,
+            "The DrQA project page is at <a href=\"https://github.com/facebookresearch/DrQA\" style=\"color: #8C1515\">https://github.com/facebookresearch/DrQA</a>."
+        )
+
+        add_paper("A Thorough Examination of the CNN/Daily Mail Reading Comprehension Task",
+            "<b>Danqi Chen</b>, Jason Bolton, Christopher D. Manning",
+            "In ACL 2016 <br>(<b><font color=\"red\">Outstanding Paper Award</font></b>)",
+            "papers/acl2016.pdf",
+            "@inproceedings{chen2016thorough,<br>" +
+            "&nbsp;&nbsp;&nbsp;title={A Thorough Examination of the {CNN/Daily Mail} Reading Comprehension Task},<br>" +
+            "&nbsp;&nbsp;&nbsp;author={Chen, Danqi and Bolton, Jason and Manning, Christopher D.},<br>" +
+            "&nbsp;&nbsp;&nbsp;booktitle={Association for Computational Linguistics (ACL)},<br>" +
+            "&nbsp;&nbsp;&nbsp;year={2016},<br>" +
+            "&nbsp;&nbsp;&nbsp;pages={2358--2367}<br>}",
+            "Enabling a computer to understand a document so that it can answer comprehension questions is a central, yet unsolved goal of NLP. A key factor impeding its solution by machine learned systems is the limited availability of human-annotated data. Hermann et al. (2015) seek to solve this problem by creating over a million training examples by pairing CNN and Daily Mail news articles with their summarized bullet points, and show that a neural network can then be trained to give good performance on this task. In this paper, we conduct a thorough examination of this new reading comprehension task. Our primary aim is to understand what depth of language understanding is required to do well on this task. We approach this from one side by doing a careful hand-analysis of a small subset of the problems and from the other by showing that simple, carefully designed systems can obtain accuracies of 73.6% and 76.6% on these two datasets, exceeding current state-of-the-art results by 7-10% and approaching what we believe is the ceiling for performance on this task.",
+            "https://arxiv.org/abs/1606.02858",
+            "https://github.com/danqi/rc-cnn-dailymail",
+            null,
+            "presentations/acl2016_slides.pdf",
+            "http://techtalks.tv/talks/a-thorough-examination-of-the-cnndaily-mail-reading-comprehension-task/63222/"
+        )
+
+        add_paper("Representing Text for Joint Embedding of Text and Knowledge Bases",
+            "Kristina Toutanova, <b>Danqi Chen</b>, Patrick Pantel, Hoifung Poon, Pallavi Choudhury, Michael Gamon",
+            "In EMNLP 2015",
+            "papers/emnlp2015.pdf",
+            "@inproceedings{toutanova2015representing,<br>" +
+            "&nbsp;&nbsp;&nbsp;title={Representing Text for Joint Embedding of Text and Knowledge Bases},<br>" +
+            "&nbsp;&nbsp;&nbsp;author={Toutanova, Kristina and Chen, Danqi and Pantel, Patrick and Poon, Hoifung and Choudhury, Pallavi and Gamon, Michael},<br>" +
+            "&nbsp;&nbsp;&nbsp;booktitle={Empirical Methods in Natural Language Processing (EMNLP)},<br>" +
+            "&nbsp;&nbsp;&nbsp;year={2015},<br>" +
+            "&nbsp;&nbsp;&nbsp;pages={1499--1509}<br>}",
+            "Models that learn to represent textual and knowledge base relations in the same continuous latent space are able to perform joint inferences among the two kinds of relations and obtain high accuracy on knowledge base completion (Riedel et al., 2013). In this paper we propose a model that captures the compositional structure of textual relations, and jointly optimizes entity, knowledge base, and textual relation representations. The proposed model significantly improves performance over a model that does not share parameters among textual relations with common sub-structure.",
+            null,
+            null,
+            "data/fb15k-237.zip",
+            null,
+            "https://vimeo.com/163292987"
+        )
+
+        add_paper("Observed Versus Latent Features for Knowledge Base and Text Inference",
+            "Observed Versus Latent Features for Knowledge Base and Text Inference",
+            "In Workshop on Continuous Vector Space Models and Their Compositionality (CVSC) 2015",
+            "papers/cvsc2015.pdf",
+            "@inproceedings{toutanova2015observed,<br>" +
+            "&nbsp;&nbsp;&nbsp;title={Observed Versus Latent Features for Knowledge Base and Text Inference},<br>" +
+            "&nbsp;&nbsp;&nbsp;author={Kristina Toutanova and Danqi Chen},<br>" +
+            "&nbsp;&nbsp;&nbsp;booktitle={Workshop on Continuous Vector Space Models and Their Compositionality (CVSC)},<br>" +
+            "&nbsp;&nbsp;&nbsp;year={2015},<br>}",
+            "In this paper we show the surprising effectiveness of a simple observed features model in comparison to latent feature models on two benchmark knowledge base completion datasets, FB15K and WN18. We also compare latent and observed feature models on a more challenging dataset derived from FB15K, and additionally coupled with textual mentions from a web-scale corpus. We show that the observed features model is most effective at capturing the information present for entity pairs with textual relations, and a combination of the two combines the strengths of both model types.",
+            null,
+            null,
+            "data/fb15k-237.zip",
+            null
+        )
+
+        add_paper("A Fast and Accurate Dependency Parser using Neural Networks",
+            "<b>Danqi Chen</b>, Christopher D. Manning",
+            "In EMNLP 2014",
+            "papers/emnlp2014.pdf",
+            "@inproceedings{chen2014fast,<br>" +
+            "&nbsp;&nbsp;&nbsp;title={A Fast and Accurate Dependency Parser using Neural Networks},<br>" +
+            "&nbsp;&nbsp;&nbsp;author={Chen, Danqi and Manning, Christopher D},<br>" +
+            "&nbsp;&nbsp;&nbsp;booktitle={Empirical Methods in Natural Language Processing (EMNLP)},<br>" +
+            "&nbsp;&nbsp;&nbsp;year={2014},<br>" +
+            "&nbsp;&nbsp;&nbsp;pages={740--750}<br>}",
+            "Almost all current dependency parsers classify based on millions of sparse indicator features. Not only do these features generalize poorly, but the cost of feature computation restricts parsing speed significantly. In this work, we propose a novel way of learning a neural network classifier for use in a greedy, transition-based dependency parser. Because this classifier learns and uses just a small number of dense features, it can work very fast, while achieving an about 2% improvement in unlabeled and labeled attachment scores on both English and Chinese datasets. Concretely, our parser is able to parse more than 1000 sentences per second at 92.2% unlabeled attachment score on the English Penn Treebank.",
+            null,
+            "https://stanfordnlp.github.io/CoreNLP/depparse.html",
+            null,
+            "presentations/emnlp2014_slides.pdf",
+            "https://www.youtube.com/watch?v=MLAcBv5dLEs",
+            "The neural dependency parser is included in the <a href=\"https://nlp.stanford.edu/software/corenlp.shtml\" style=\"color: #8C1515\">Stanford CoreNLP</a> software (since v3.5.0)"
+        )
+
+        add_paper("Reasoning With Neural Tensor Networks for Knowledge Base Completion",
+            "Richard Socher*, <b>Danqi Chen</b>*, Christopher D. Manning, Andrew Ng",
+            "In NIPS 2013",
+            "papers/nips2013.pdf",
+            "@inproceedings{socher2013reasoning,<br>" +
+            "&nbsp;&nbsp;&nbsp;title={Reasoning With Neural Tensor Networks for Knowledge Base Completion},<br>" +
+            "&nbsp;&nbsp;&nbsp;author={Socher, Richard and Chen, Danqi and Manning, Christopher D and Ng, Andrew},<br>" +
+            "&nbsp;&nbsp;&nbsp;booktitle={Advances in Neural Information Processing Systems (NIPS)},<br>" +
+            "&nbsp;&nbsp;&nbsp;year={2013},<br>" +
+            "&nbsp;&nbsp;&nbsp;pages={926--934}<br>}",
+            "Knowledge bases are an important resource for question answering and other tasks but often suffer from incompleteness and lack of ability to reason over their discrete entities and relationships. In this paper we introduce an expressive neural tensor network suitable for reasoning over relationships between two entities. Previous work represented entities as either discrete atomic units or with a single entity vector representation. We show that performance can be improved when entities are represented as an average of their constituting word vectors. This allows sharing of statistical strength between, for instance, facts involving the “Sumatran tiger” and “Bengal tiger.” Lastly, we demonstrate that all models improve when these word vectors are initialized with vectors learned from unsupervised large corpora. We assess the model by considering the problem of predicting additional true relations between entities given a subset of the knowledge base. Our model outperforms previous models and can classify unseen relationships in WordNet and FreeBase with an accuracy of 86.2% and 90.0%, respectively.",
+            null,
+            null,
+            "data/nips13-dataset.tar.bz2",
+            "presentations/nips2013_poster.pdf"
+        )
+
+        add_paper("Beyond Ten Blue Links: Enabling User Click Modeling in Federated Web Search",
+            "Danqi Chen</b>, Weizhu Chen, Haixun Wang, Zheng Chen, Qiang Yang",
+            "In WSDM 2012",
+            "papers/wsdm2012.pdf",
+            "@inproceedings{chen2012beyond,<br>" +
+            "&nbsp;&nbsp;&nbsp;title={Beyond ten blue links: enabling user click modeling in federated web search},<br>" +
+            "&nbsp;&nbsp;&nbsp;author={Chen, Danqi and Chen, Weizhu and Wang, Haixun and Chen, Zheng and Yang, Qiang},<br>" +
+            "&nbsp;&nbsp;&nbsp;booktitle={International Conference on Web Search and Data Mining (WSDM)},<br>" +
+            "&nbsp;&nbsp;&nbsp;year={2012},<br>}",
+            "Click model has been positioned as an effective approach to interpret user click behavior in search engines. Existing advances in click models mostly focus on traditional Web search which contains only ten homogeneous Web HTML documents. However, in modern commercial search engines, more and more Web search results are federated from multiple sources and contain non-HTML results returned by other heterogeneous vertical engines, such as video or image search engines. In this paper, we study user click behavior in federated search results. In order to investigate this problem, we put forward an observation that user click behavior in federated search is highly different from that in traditional Web search, making it difficult to interpret using existing click models. Thus, we propose a novel federated click model (FCM) to interpret user click behavior in federated search. In particular, we introduce two new biases in FCM. The first indicates that users tend to be attracted by vertical results and their visual attention on them may increase the examination probability of other nearby web results. The other illustrates that user click behavior on vertical results may lead to more indication of relevance due to their presentation style in federated search. With these biases and an effective model to correct them, FCM is more accurate in characterizing user click behavior in federated search. Our extensive experimental results show that FCM can outperform other click models in interpreting user click behavior in federated search and achieve significant improvements in terms of both perplexity and log-likelihood.",
+            null,
+            null,
+            null,
+            "presentations/wsdm2012_slides.pptx"
+        )
+
+        document.write("</ul>")
+      </script>
+
+      <footer class="site-footer">
+        <!-- {% if site.github.is_project_page %}
+          <span class="site-footer-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</span>
+        {% endif %} -->
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

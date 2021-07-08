@@ -1,5 +1,5 @@
 ---
-Layout: default
+Layout: newtype
 title: People
 ---
 # People
