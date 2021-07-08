@@ -92,7 +92,7 @@
             "arXiv:2104.08821",
             "https://arxiv.org/pdf/2104.08821.pdf",
             "@article{gao2021simcse,<br>" +
-            "&nbsp;&nbsp;&nbsp;title={{SimCSE}: Simple Contrastive Learning of Sentence Embeddings},<br>" +
+            "&nbsp;&nbsp;&nbsp;title={SimCSE: Simple Contrastive Learning of Sentence Embeddings},<br>" +
             "&nbsp;&nbsp;&nbsp;author={Gao, Tianyu and Yao, Xingcheng and Chen, Danqi},<br>" +
             "&nbsp;&nbsp;&nbsp;journal={arXiv preprint arXiv:2104.08821},<br>" +
             "&nbsp;&nbsp;&nbsp;year={2021}<br>}",
@@ -224,40 +224,6 @@
             "You can try out the <a href=\"http://qa.cs.washington.edu:2020/\" style=\"color: #8C1515\">demo</a> of DPR!"
         )
 
-        add_paper("TextHide: Tackling Data Privacy in Language Understanding Tasks",
-            "Yangsibo Huang, Zhao Song, <b>Danqi Chen</b>, Kai Li, Sanjeev Arora",
-            "In EMNLP 2020 (Findings)",
-            "papers/emnlp2020b.pdf",
-            "@inproceedings{huang2020texthide,<br>" +
-            "&nbsp;&nbsp;&nbsp;title={{TextHide}: Tackling Data Privacy in Language Understanding Tasks},<br>" +
-            "&nbsp;&nbsp;&nbsp;author={Huang, Yangsibo and Song, Zhao and Chen, Danqi and Li, Kai and Arora, Sanjeev},<br>" +
-            "&nbsp;&nbsp;&nbsp;booktitle={Findings of Empirical Methods in Natural Language Processing (EMNLP)},<br>" +
-            "&nbsp;&nbsp;&nbsp;year={2020}<br>}",
-            "An unsolved challenge in distributed or federated learning is to effectively mitigate privacy risks without slowing down training or reducing accuracy.  In this paper, we propose TextHide aiming at addressing this challenge for natural language understanding tasks.  It requires all participants to add a simple encryption step to prevent an eavesdropping attacker from recovering private text data.  Such an encryption step is efficient and only affects the task performance slightly.  In addition, TextHide fits well with the popular framework of fine-tuning pre-trained language models (e.g., BERT) for any sentence or sentence-pair task. We evaluate TextHide on the GLUE benchmark, and our experiments show that TextHide can effectively defend attacks on shared gradients or representations and the averaged accuracy reduction is only 1.9%. We also present an analysis of the security of TextHide using a conjecture about the computational intractability of a mathematical problem.",
-            "https://arxiv.org/abs/2010.06053",
-            "https://github.com/Hazelsuko07/TextHide",
-            null,
-            null,
-            "https://slideslive.com/38939771/texthide-tackling-data-privacy-in-language-understanding-tasks"
-        )
-
-        add_paper("SpanBERT: Improving Pre-training by Representing and Predicting Spans",
-            "Mandar Joshi*, <b>Danqi Chen</b>*, Yinhan Liu, Daniel S. Weld, Luke Zettlemoyer, Omer Levy",
-            "In TACL 2020 (presented at ACL 2020)",
-            "papers/tacl2020.pdf",
-            "@article{joshi2020spanbert,<br>" +
-            "&nbsp;&nbsp;&nbsp;title={{SpanBERT}: Improving Pre-training by Representing and Predicting Spans},<br>" +
-            "&nbsp;&nbsp;&nbsp;author={Joshi, Mandar and Chen, Danqi and Liu, Yinhan and Weld, Daniel S and Zettlemoyer, Luke and Levy, Omer},<br>" +
-            "&nbsp;&nbsp;&nbsp;journal={Transactions of the Association of Computational Linguistics (TACL)},<br>" +
-            "&nbsp;&nbsp;&nbsp;year={2020}<br>}",
-            "We present SpanBERT, a pre-training method that is designed to better represent and predict spans of text. Our approach extends BERT by (1) masking contiguous random spans, rather than random tokens, and (2) training the span boundary representations to predict the entire content of the masked span, without relying on the individual token representations within it. SpanBERT consistently outperforms BERT and our better-tuned baselines, with substantial gains on span selection tasks such as question answering and coreference resolution. In particular, with the same training data and model size as BERT-large, our single model obtains 94.6% and 88.7% F1 on SQuAD 1.1 and 2.0, respectively. We also achieve a new state of the art on the OntoNotes coreference resolution task (79.6\% F1), strong performance on the TACRED relation extraction benchmark, and even show gains on GLUE.",
-            "https://arxiv.org/abs/1907.10529",
-            "https://github.com/facebookresearch/SpanBERT",
-            null,
-            null,
-            "https://slideslive.com/38929502/spanbert-improving-pretraining-by-representing-and-predicting-spans"
-        )
-
         add_paper("Open-Domain Question Answering",
             "<b>Danqi Chen</b>, Wen-tau Yih",
             "ACL 2020 (Tutorial)",
@@ -279,19 +245,6 @@
 
         document.write("<h2>2019</h2>")
         document.write("<ul>")
-        add_paper("RoBERTa: A Robustly Optimized BERT Pretraining Approach",
-            "Yinhan Liu*, Myle Ott*, Naman Goyal*, Jingfei Du*, Mandar Joshi, <b>Danqi Chen</b>, Omer Levy, Mike Lewis, Luke Zettlemoyer, Veselin Stoyanov",
-            "arXiv 1907.11692",
-            "papers/roberta_paper.pdf",
-            "@article{liu2019roberta,<br>" +
-            "&nbsp;&nbsp;&nbsp;title={{RoBERTa}: {A} Robustly Optimized {BERT} Pretraining Approach},<br>" +
-            "&nbsp;&nbsp;&nbsp;author={Liu, Yinhan and Ott, Myle and Goyal, Naman and Du, Jingfei and Joshi, Mandar and Chen, Danqi and Levy, Omer and Lewis, Mike and Zettlemoyer, Luke and Stoyanov, Veselin},<br>" +
-            "&nbsp;&nbsp;&nbsp;journal={arXiv preprint arXiv:1907.11692},<br>" +
-            "&nbsp;&nbsp;&nbsp;year={2019}<br>}",
-            "Language model pretraining has led to significant performance gains but careful comparison between different approaches is challenging. Training is computationally expensive, often done on private datasets of different sizes, and, as we will show, hyperparameter choices have significant impact on the final results. We present a replication study of BERT pretraining (Devlin et al., 2019) that carefully measures the impact of many key hyperparameters and training data size. We find that BERT was significantly undertrained, and can match or exceed the performance of every model published after it. Our best model achieves state-of-the-art results on GLUE, RACE and SQuAD. These results highlight the importance of previously overlooked design choices, and raise questions about the source of recently reported improvements. We release our models and code.",
-            "https://arxiv.org/abs/1907.11692",
-            "https://github.com/pytorch/fairseq/tree/master/examples/roberta"
-        )
 
         add_paper("Knowledge Guided Text Retrieval and Reading for Open Domain Question Answering",
             "Sewon Min, <b>Danqi Chen</b>, Luke Zettlemoyer, Hannaneh Hajishirzi",
@@ -322,40 +275,6 @@
             null,
             "presentations/emnlp2019_slides.pdf",
             "https://vimeo.com/426355627"
-        )
-
-        add_paper("CoQA: A Conversational Question Answering Challenge",
-            "Siva Reddy*, <b>Danqi Chen</b>*, Christopher D. Manning",
-            "In TACL 2019 (presented at NAACL 2019)",
-            "papers/tacl2019.pdf",
-            "@article{reddy2019coqa,<br>" +
-            "&nbsp;&nbsp;&nbsp;title={{CoQA}: A Conversational Question Answering Challenge},<br>" +
-            "&nbsp;&nbsp;&nbsp;author={Reddy, Siva and Chen, Danqi and Manning, Christopher D},<br>" +
-            "&nbsp;&nbsp;&nbsp;journal={Transactions of the Association of Computational Linguistics (TACL)},<br>" +
-            "&nbsp;&nbsp;&nbsp;year={2019}<br>}",
-            "Humans gather information by engaging in conversations involving a series of interconnected questions and answers. For machines to assist in information gathering, it is therefore essential to enable them to answer conversational questions. We introduce CoQA, a novel dataset for building Conversational Question Answering systems. Our dataset contains 127k questions with answers, obtained from 8k conversations about text passages from seven diverse domains. The questions are conversational, and the answers are free-form text with their corresponding evidence highlighted in the passage. We analyze CoQA in depth and show that conversational questions have challenging phenomena not present in existing reading comprehension datasets, e.g., coreference and pragmatic reasoning. We evaluate strong conversational and reading comprehension models on CoQA. The best system obtains an F1 score of 65.4%, which is 23.4 points behind human performance (88.8%), indicating there is ample room for improvement. We launch CoQA as a challenge to the community at https://stanfordnlp.github.io/coqa/.",
-            "https://arxiv.org/abs/1808.07042",
-            "https://github.com/stanfordnlp/coqa-baselines",
-            "https://stanfordnlp.github.io/coqa/",
-            null,
-            "https://vimeo.com/356110589",
-            "The dataset and leaderboard are at <a href=\"https://stanfordnlp.github.io/coqa/\" style=\"color: #8C1515\">https://stanfordnlp.github.io/coqa/</a>."
-        )
-
-        add_paper("MRQA 2019 Shared Task: Evaluating Generalization in Reading Comprehension",
-            "Adam Fisch, Alon Talmor, Robin Jia, Minjoon Seo, Eunsol Choi, <b>Danqi Chen</b>",
-            "In MRQA 2019",
-            "papers/mrqa2019.pdf",
-            "@inproceedings{fisch2019mrqa,<br>" +
-            "&nbsp;&nbsp;&nbsp;title={{MRQA} 2019 Shared Task: Evaluating Generalization in Reading Comprehension},<br>" +
-            "&nbsp;&nbsp;&nbsp;author={Fisch, Adam and Talmor, Alon and Jia, Robin and Seo, Minjoon and Choi, Eunsol and Chen, Danqi},<br>" +
-            "&nbsp;&nbsp;&nbsp;booktitle={Proceedings of 2nd Machine Reading for Reading Comprehension (MRQA) Workshop at EMNLP},<br>" +
-            "&nbsp;&nbsp;&nbsp;year={2019},<br>" +
-            "&nbsp;&nbsp;&nbsp;pages={1--13}<br>}",
-            "We present the results of the Machine Reading for Question Answering (MRQA) 2019 shared task on evaluating the generalization capabilities of reading comprehension systems. In this task, we adapted and unified 18 distinct question answering datasets into the same format. Among them, six datasets were made available for training, six datasets were made available for development, and the final six were hidden for final evaluation. Ten teams submitted systems, which explored various ideas including data sampling, multi-task learning, adversarial training and ensembling. The best system achieved an average F1 score of 72.5 on the 12 held-out datasets, 10.7 absolute points higher than our initial baseline based on BERT.",
-            "https://arxiv.org/abs/1910.09753",
-            "https://github.com/mrqa/MRQA-Shared-Task-2019/tree/master/baseline",
-            "https://github.com/mrqa/MRQA-Shared-Task-2019#datasets"
         )
         document.write("</ul>")
 
@@ -429,18 +348,6 @@
             null,
             "presentations/acl2016_slides.pdf",
             "http://techtalks.tv/talks/a-thorough-examination-of-the-cnndaily-mail-reading-comprehension-task/63222/"
-        )
-
-        add_paper("Stanford at TAC KBP 2016: Sealing Pipeline Leaks and Understanding Chinese",
-            "Yuhao Zhang*, Arun Chaganty*, Ashwin Paranjape*, <b>Danqi Chen</b>*, Jason Bolton*, Peng Qi, Christopher D. Manning",
-            "In TAC 2016",
-            "papers/tac2016.pdf",
-            "@inproceedings{zhang2016stanford,<br>" +
-            "&nbsp;&nbsp;&nbsp;title={{Stanford} at {TAC} {KBP} 2016: Sealing Pipeline Leaks and Understanding Chinese},<br>" +
-            "&nbsp;&nbsp;&nbsp;author={Zhang, Yuhao and Chaganty, Arun and Paranjape, Ashwin and Chen, Danqi and Bolton, Jason and Qi, Peng and Manning, Christopher D},<br>" +
-            "&nbsp;&nbsp;&nbsp;booktitle={Text Analysis Conference (TAC)},<br>" +
-            "&nbsp;&nbsp;&nbsp;year={2016},<br>}",
-            "We describe Stanford’s entries in the TAC KBP 2016 Cold Start Slot Filling and Knowledge Base Population challenge. Our biggest contribution is an entirely new Chinese entity detection and relation extraction system for the new Chinese and cross-lingual relation extraction tracks. This new system consists of several ruled-based relation extractors and a distantly supervised extractor. We also analyze errors produced by our existing mature English KBP system, which leads to several fixes, notably improvements to our patternsbased extractor and neural network model, support for nested mentions and inferred relations. Stanford’s 2016 English, Chinese and cross-lingual submissions achieved an overall (macro-averaged LDC-MEAN) F1 of 22.0, 14.2, and 11.2 respectively on the 2016 evaluation data, performing well above the median entries, at 7.5, 13.2 and 8.3 respectively."
         )
 
         add_paper("Representing Text for Joint Embedding of Text and Knowledge Bases",
